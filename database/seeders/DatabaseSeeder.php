@@ -13,6 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            UserSeeder::class,
+            SoftwareSeeder::class,
+            PositionSeeder::class,
+            ArtistSeeder::class,
+            WorkSeeder::class,
+            PageSeeder::class,
+            FieldSeeder::class,
+            FieldPageSeeder::class,
+            FileSeeder::class,
+            ArtistWorkSeeder::class,
+            SoftwareWorkSeeder::class,
+        ]);
     }
 }
